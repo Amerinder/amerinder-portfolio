@@ -105,6 +105,25 @@ body {
     transform-style: preserve-3d;
   }
 
+  .project-rail {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.45) rgba(255, 255, 255, 0.06);
+  }
+
+  .project-rail::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .project-rail::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .project-rail::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(145, 94, 255, 0.9), rgba(0, 255, 255, 0.9));
+  }
+
   .field {
     @apply w-full rounded-[1.25rem] border border-white/10 bg-white/5 px-5 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-secondary/40 focus:bg-white/10;
   }
@@ -219,3 +238,6 @@ body {
 #root {
   min-height: 100vh;
 }
+
+
+

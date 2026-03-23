@@ -1,12 +1,14 @@
-import { motion } from 'framer-motion';
+﻿import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
 const roles = ['Full-Stack Developer', 'Frontend Developer', 'Problem Solver'];
+const heroImages = ['/amerinderformal.png', '/amerinder%20portfolio.png'];
 
 function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [typed, setTyped] = useState('');
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const current = roles[roleIndex];
@@ -26,6 +28,15 @@ function Hero() {
     return () => clearInterval(typer);
   }, [roleIndex]);
 
+  const toggleHeroImage = () => {
+    setImageIndex((value) => (value + 1) % heroImages.length);
+  };
+
+  const imageClassName =
+    imageIndex === 0
+      ? 'relative z-10 h-auto max-h-[650px] w-full animate-float object-contain shadow-[0_25px_80px_rgba(0,0,0,0.32)]'
+      : 'relative z-10 h-auto w-full animate-float object-contain shadow-[0_25px_80px_rgba(0,0,0,0.32)]';
+
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28">
       <div className="layout grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
@@ -35,7 +46,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-5 inline-flex rounded-full border border-secondary/20 bg-secondary/10 px-4 py-2 text-sm text-secondary"
           >
-            Computer Science Student • Full-Stack Builder
+            Computer Science Student | Full-Stack Builder
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
@@ -82,15 +93,20 @@ function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[560px]">
-          <motion.img
-            src="/amerinder%20portfolio.png"
-            alt="Amerinder portfolio artwork"
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.25 }}
-            className="relative z-10 h-auto w-full animate-float object-contain shadow-[0_25px_80px_rgba(0,0,0,0.32)]"
-          />
+        <div className="relative mx-auto w-full max-w-[560px]" onDoubleClick={toggleHeroImage}>
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={heroImages[imageIndex]}
+              src={heroImages[imageIndex]}
+              alt="Amerinder portfolio artwork"
+              initial={{ opacity: 0, rotateY: -90, scale: 0.95 }}
+              animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+              exit={{ opacity: 0, rotateY: 90, scale: 0.95 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className={imageClassName}
+              style={{ transformStyle: 'preserve-3d' }}
+            />
+          </AnimatePresence>
         </div>
       </div>
     </section>
@@ -98,3 +114,4 @@ function Hero() {
 }
 
 export default Hero;
+

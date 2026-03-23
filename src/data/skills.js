@@ -1,6 +1,7 @@
 import {
   FaBlender,
   FaCss3Alt,
+  FaDatabase,
   FaGitAlt,
   FaHtml5,
   FaJava,
@@ -11,6 +12,45 @@ import {
   FaReact,
 } from 'react-icons/fa';
 import { SiC, SiCplusplus, SiExpress, SiFlutter, SiMysql, SiNodedotjs, SiTailwindcss, SiVmware } from 'react-icons/si';
+
+export const techStackCards = [
+  {
+    title: 'Frontend',
+    value: 'React / Tailwind CSS',
+    icon: FaReact,
+    items: ['React.js', 'Tailwind CSS', 'HTML5', 'CSS3'],
+  },
+  {
+    title: 'Language',
+    value: 'JavaScript / Java',
+    icon: FaJava,
+    items: ['JavaScript', 'Java', 'Python', 'PHP', 'C / C++'],
+  },
+  {
+    title: 'Backend',
+    value: 'Node.js / Express',
+    icon: SiExpress,
+    items: ['Node.js', 'Express.js'],
+  },
+  {
+    title: 'Database',
+    value: 'MongoDB / MySQL',
+    icon: FaDatabase,
+    items: ['MongoDB', 'MySQL'],
+  },
+  {
+    title: 'APIs',
+    value: 'REST APIs / JWT',
+    icon: SiVmware,
+    items: ['REST APIs', 'JWT'],
+  },
+  {
+    title: 'Tools',
+    value: 'Git / Linux / Flutter',
+    icon: FaGitAlt,
+    items: ['Git', 'GitHub', 'Linux', 'Flutter', 'Blender', 'Cisco Packet Tracer'],
+  },
+];
 
 export const skillGroups = [
   {

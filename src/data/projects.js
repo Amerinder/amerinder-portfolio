@@ -1,5 +1,20 @@
 export const projects = [
   {
+    title: 'Studio Booking Platform',
+    description:
+      'A polished MERN-style portfolio project for a photography studio with public marketing pages, secure client authentication, booking flow with slot selection, profile management, and an admin dashboard for users, bookings, and contact messages.',
+    image:
+      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80',
+    tech: ['MERN'],
+    highlights: [
+      'Public-facing studio pages designed to convert visitors into bookings',
+      'Client login, profile management, and slot-based booking workflow',
+      'Admin dashboard for handling users, bookings, and contact messages',
+    ],
+    github: 'https://github.com/Amerinder/studio-booking-mern',
+    demo: 'https://studio-booking-web-nine.vercel.app',
+  },
+  {
     title: 'Community Vendor Shopping Website',
     description:
       'Full-stack e-commerce platform supporting 50+ vendors and 1,000+ customers with secure handling, streamlined workflows, and a responsive storefront.',
@@ -11,8 +26,23 @@ export const projects = [
       'Secure data handling and optimized backend architecture',
       'Faster page loading and intuitive mobile-first UI',
     ],
-    github: 'https://github.com/Amerinder',
-    demo: '#',
+    github: 'https://github.com/Amerinder/Friday-for-Local-Vendors',
+    demo: 'http://fridayforvendors.42web.io/',
+  },
+  {
+    title: 'Digital Electricity Portal',
+    description:
+      'Responsive front-end replica of a government electricity portal built with accessibility, structure, and improved cross-browser usability in mind.',
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    highlights: [
+      'Government portal style recreated with modern polish',
+      'Responsive layouts tested across major browsers',
+      'Improved navigation clarity and UI consistency',
+    ],
+    github: 'https://github.com/Amerinder/Indian-Electricity-Website',
+    demo: 'https://amerinder.github.io/Indian-Electricity-Website/',
   },
   {
     title: 'AI Chatbot for History of the World',
@@ -27,22 +57,7 @@ export const projects = [
       'Optimized frontend and backend workflow',
     ],
     github: 'https://github.com/Amerinder',
-    demo: '#',
-  },
-  {
-    title: 'Digital Electricity Portal',
-    description:
-      'Responsive front-end replica of a government electricity portal built with accessibility, structure, and improved cross-browser usability in mind.',
-    image:
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    highlights: [
-      'Government portal style recreated with modern polish',
-      'Responsive layouts tested across major browsers',
-      'Improved navigation clarity and UI consistency',
-    ],
-    github: 'https://github.com/Amerinder',
-    demo: '#',
+    demo: null,
   },
 ];
 

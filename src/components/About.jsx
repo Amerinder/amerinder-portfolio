@@ -11,7 +11,7 @@ function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="card-panel w-full p-8 md:p-10"
+          className="w-full py-2"
         >
           <h2 className="section-title">Full-stack development focused on modern MERN applications and meaningful user experiences.</h2>
           <div className="mt-8 space-y-6 text-lg leading-8 text-white/72">

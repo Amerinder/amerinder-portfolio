@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiDownloadCloud, FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
+import { FiDownloadCloud, FiEye, FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
 
 function Contact() {
   const formRef = useRef(null);
@@ -67,9 +67,12 @@ function Contact() {
                   <FiGithub /> github.com/Amerinder
                 </a>
               </div>
-              <div className="mt-8">
-                <a href="/Amerinder_CV.png" download className="btn-primary">
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="/Amerinder_CV.pdf" download className="btn-primary">
                   Download CV <FiDownloadCloud />
+                </a>
+                <a href="/Amerinder_CV.pdf" target="_blank" rel="noreferrer" className="btn-secondary">
+                  View CV <FiEye />
                 </a>
               </div>
             </div>
